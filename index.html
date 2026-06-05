@@ -4,93 +4,135 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>IMBU Cosmetics</title>
+<title>IMBU Networking</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: linear-gradient(180deg, #faf8f5 0%, #f2eee8 100%);
-    color: #2b2b2b;
-    min-height: 100vh;
+body{
+    font-family: Georgia, serif;
+    min-height:100vh;
+
+    background:
+        radial-gradient(circle at 15% 10%, rgba(207,224,171,.9), transparent 25%),
+        radial-gradient(circle at 85% 20%, rgba(192,220,160,.8), transparent 22%),
+        radial-gradient(circle at 15% 90%, rgba(191,219,155,.7), transparent 25%),
+        radial-gradient(circle at 85% 90%, rgba(203,220,244,.8), transparent 25%),
+        #f8f7f1;
+
+    color:#355541;
 }
 
-.container {
-    max-width: 420px;
-    margin: auto;
-    padding: 40px 20px 60px;
+.container{
+    max-width:420px;
+    margin:auto;
+    padding:25px 18px 40px;
 }
 
-.logo {
-    text-align: center;
-    margin-bottom: 20px;
+.logo{
+    text-align:center;
+    margin-bottom:25px;
 }
 
-.logo h1 {
-    font-size: 2rem;
-    letter-spacing: 2px;
+.logo img{
+    width:240px;
+    max-width:100%;
 }
 
-.tagline {
-    text-align: center;
-    color: #666;
-    margin-bottom: 40px;
-    line-height: 1.5;
+.button{
+    display:flex;
+    align-items:center;
+
+    text-decoration:none;
+    color:#355541;
+
+    border:2px solid #355541;
+    border-radius:999px;
+
+    background:#f6f4eb;
+
+    min-height:82px;
+    margin-bottom:16px;
+
+    overflow:hidden;
+
+    transition:.2s ease;
 }
 
-.card {
-    background: white;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 16px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+.button:hover{
+    transform:translateY(-2px);
 }
 
-.name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 8px;
+.number{
+    width:68px;
+    height:68px;
+
+    min-width:68px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+    border:2px solid #355541;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-left:6px;
+
+    font-size:30px;
 }
 
-.role {
-    color: #777;
-    margin-bottom: 15px;
+.info{
+    padding-left:18px;
+    padding-right:15px;
 }
 
-.linkedin {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    background: #0A66C2;
-    color: white;
-    padding: 14px;
-    border-radius: 12px;
-    font-weight: 600;
+.name{
+    font-size:20px;
+    line-height:1.1;
 }
 
-.linkedin:hover {
-    opacity: 0.9;
+.role{
+    font-size:14px;
+    margin-top:4px;
 }
 
-.footer {
-    text-align: center;
-    margin-top: 30px;
+.green{
+    background:
+      linear-gradient(90deg,#d6e4a7 0%,#f6f4eb 25%);
 }
 
-.website {
-    display: block;
-    background: #2b2b2b;
-    color: white;
-    text-decoration: none;
-    padding: 16px;
-    border-radius: 14px;
-    font-weight: 600;
+.blue{
+    background:
+      linear-gradient(90deg,#d8e6d5 0%,#dbe9fb 100%);
 }
+
+.yellow{
+    background:
+      linear-gradient(90deg,#d7e3a8 0%,#f2e6a3 100%);
+}
+
+@media (max-width:480px){
+
+    .container{
+        padding:20px 14px 30px;
+    }
+
+    .name{
+        font-size:18px;
+    }
+
+    .role{
+        font-size:13px;
+    }
+}
+
 </style>
 </head>
 
@@ -99,42 +141,58 @@ body {
 <div class="container">
 
     <div class="logo">
-        <h1>IMBU</h1>
+        <img src="logo.png" alt="IMBU">
     </div>
 
-    <div class="tagline">
-        Innovative cosmetic formulation and manufacturing solutions.
-    </div>
+    <a class="button green" href="#">
+        <div class="number">1</div>
+        <div class="info">
+            <div class="name">Shuru Qian</div>
+        </div>
+    </a>
 
-    <div class="card">
-        <div class="name">Alice Zhang</div>
-        <div class="role">Formulation Scientist</div>
-        <a class="linkedin" href="https://linkedin.com">
-            Connect on LinkedIn
-        </a>
-    </div>
+    <a class="button green" href="#">
+        <div class="number">2</div>
+        <div class="info">
+            <div class="name">Yanting Huang</div>
+        </div>
+    </a>
 
-    <div class="card">
-        <div class="name">Team Member</div>
-        <div class="role">Business Development</div>
-        <a class="linkedin" href="https://linkedin.com">
-            Connect on LinkedIn
-        </a>
-    </div>
+    <a class="button green" href="#">
+        <div class="number">3</div>
+        <div class="info">
+            <div class="name">Alice Zhang</div>
+        </div>
+    </a>
 
-    <div class="card">
-        <div class="name">Team Member</div>
-        <div class="role">Research & Development</div>
-        <a class="linkedin" href="https://linkedin.com">
-            Connect on LinkedIn
-        </a>
-    </div>
+    <a class="button blue" href="#">
+        <div class="number">4</div>
+        <div class="info">
+            <div class="name">Qiwen Zheng</div>
+        </div>
+    </a>
 
-    <div class="footer">
-        <a class="website" href="#">
-            Visit Company Website
-        </a>
-    </div>
+    <a class="button yellow" href="#">
+        <div class="number">5</div>
+        <div class="info">
+            <div class="name">Xihua Zheng</div>
+        </div>
+    </a>
+
+    <a class="button green" href="#">
+        <div class="number">6</div>
+        <div class="info">
+            <div class="name">Xinyang Shi</div>
+        </div>
+    </a>
+
+    <a class="button green" href="#">
+        <div class="number">7</div>
+        <div class="info">
+            <div class="name">Ruby Guttmann</div>
+            <div class="role">Designer (MADA)</div>
+        </div>
+    </a>
 
 </div>
 
