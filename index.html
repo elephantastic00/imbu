@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>IMBU Networking</title>
 
 <style>
+
+@font-face {
+    font-family: 'MinervaModern';
+    src: url('fonts/fonts.com-MinervaModern_Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+}
 
 *{
     margin:0;
@@ -15,36 +26,42 @@
 }
 
 body{
-    font-family: Georgia, serif;
+
     min-height:100vh;
 
     background:
-        radial-gradient(circle at 15% 10%, rgba(207,224,171,.9), transparent 25%),
-        radial-gradient(circle at 85% 20%, rgba(192,220,160,.8), transparent 22%),
-        radial-gradient(circle at 15% 90%, rgba(191,219,155,.7), transparent 25%),
-        radial-gradient(circle at 85% 90%, rgba(203,220,244,.8), transparent 25%),
-        #f8f7f1;
+        radial-gradient(circle at 15% 10%, rgba(207,224,171,.75), transparent 25%),
+        radial-gradient(circle at 85% 15%, rgba(203,220,175,.75), transparent 22%),
+        radial-gradient(circle at 10% 90%, rgba(189,219,156,.65), transparent 25%),
+        radial-gradient(circle at 90% 90%, rgba(208,223,245,.75), transparent 25%),
+        #f8f6f0;
 
     color:#355541;
 }
 
 .container{
-    max-width:420px;
+
+    max-width:430px;
     margin:auto;
-    padding:25px 18px 40px;
+
+    padding-top:10px;
+    padding-bottom:30px;
+    padding-left:18px;
+    padding-right:18px;
 }
 
 .logo{
     text-align:center;
-    margin-bottom:25px;
+    margin-bottom:10px;
 }
 
 .logo img{
-    width:240px;
+    width:270px;
     max-width:100%;
 }
 
 .button{
+
     display:flex;
     align-items:center;
 
@@ -54,14 +71,13 @@ body{
     border:2px solid #355541;
     border-radius:999px;
 
-    background:#f6f4eb;
+    min-height:92px;
 
-    min-height:82px;
-    margin-bottom:16px;
+    margin-bottom:14px;
 
     overflow:hidden;
 
-    transition:.2s ease;
+    transition:0.2s ease;
 }
 
 .button:hover{
@@ -69,71 +85,105 @@ body{
 }
 
 .number{
-    width:68px;
-    height:68px;
 
-    min-width:68px;
+    width:70px;
+    height:70px;
+
+    min-width:70px;
+
+    margin-left:6px;
 
     border-radius:50%;
 
     background:#ffffff;
+
     border:2px solid #355541;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    margin-left:6px;
-
-    font-size:30px;
+    font-family:'MinervaModern', serif;
+    font-size:28px;
 }
 
 .info{
     padding-left:18px;
-    padding-right:15px;
 }
 
 .name{
-    font-size:20px;
-    line-height:1.1;
+
+    font-family:'MinervaModern', serif;
+
+    font-size:30px;
+    line-height:0.95;
+
+    color:#355541;
 }
 
 .role{
+
+    font-family:'Montserrat', sans-serif;
+
     font-size:14px;
+    font-weight:400;
+
     margin-top:4px;
+
+    letter-spacing:0.02em;
+
+    color:#355541;
 }
 
 .green{
     background:
-      linear-gradient(90deg,#d6e4a7 0%,#f6f4eb 25%);
+    linear-gradient(
+        90deg,
+        #cfe08f 0%,
+        #f7f4ea 20%,
+        #f7f4ea 100%
+    );
 }
 
 .blue{
     background:
-      linear-gradient(90deg,#d8e6d5 0%,#dbe9fb 100%);
+    linear-gradient(
+        90deg,
+        #cfe0d3 0%,
+        #d7e4f5 100%
+    );
 }
 
 .yellow{
     background:
-      linear-gradient(90deg,#d7e3a8 0%,#f2e6a3 100%);
+    linear-gradient(
+        90deg,
+        #d3e1a0 0%,
+        #efe29a 100%
+    );
 }
 
-@media (max-width:480px){
+@media(max-width:430px){
 
-    .container{
-        padding:20px 14px 30px;
+    .logo img{
+        width:240px;
     }
 
     .name{
-        font-size:18px;
+        font-size:26px;
     }
 
     .role{
         font-size:13px;
     }
+
+    .button{
+        min-height:86px;
+    }
 }
 
 </style>
+
 </head>
 
 <body>
@@ -148,6 +198,7 @@ body{
         <div class="number">1</div>
         <div class="info">
             <div class="name">Shuru Qian</div>
+            <div class="role">Cleanse</div>
         </div>
     </a>
 
@@ -155,6 +206,7 @@ body{
         <div class="number">2</div>
         <div class="info">
             <div class="name">Yanting Huang</div>
+            <div class="role">Tone</div>
         </div>
     </a>
 
@@ -162,6 +214,7 @@ body{
         <div class="number">3</div>
         <div class="info">
             <div class="name">Alice Zhang</div>
+            <div class="role">Nourish</div>
         </div>
     </a>
 
@@ -169,6 +222,7 @@ body{
         <div class="number">4</div>
         <div class="info">
             <div class="name">Qiwen Zheng</div>
+            <div class="role">Repair</div>
         </div>
     </a>
 
@@ -176,6 +230,7 @@ body{
         <div class="number">5</div>
         <div class="info">
             <div class="name">Xihua Zheng</div>
+            <div class="role">Protect</div>
         </div>
     </a>
 
@@ -183,6 +238,7 @@ body{
         <div class="number">6</div>
         <div class="info">
             <div class="name">Xinyang Shi</div>
+            <div class="role">Soothe</div>
         </div>
     </a>
 
